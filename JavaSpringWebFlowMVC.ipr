@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactManager">
+    <artifact type="exploded-war" name="cnew">
+      <output-path>$PROJECT_DIR$/out/artifacts/cnew</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="JavaSpringWebFlowMVC/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="JavaSpringWebFlowMVC" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Spring MVC-4.3.7.RELEASE" />
+            <element id="library" level="project" name="Spring Webflow-2.4.0" />
+            <element id="library" level="project" name="Spring-4.3.7.RELEASE" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../01 JoinTW-2017.2.10/02 New Hire Orientation/Codes/java8-jersey-spring-boot" value="1487077705000" />
+        <entry key="$PROJECT_DIR$/../../01 JoinTW-2017.2.10/02 New Hire Orientation/Codes/java8-jersey-spring-boot-johannesburg" value="1487209936000" />
+        <entry key="$PROJECT_DIR$/../../01 JoinTW-2017.2.10/03 Projects/gs-rest-service/complete" value="1487931350000" />
+        <entry key="$PROJECT_DIR$/../../01 JoinTW-2017.2.10/03 Projects/gs-rest-service/initial" value="1487598915000" />
+        <entry key="$PROJECT_DIR$/../../01 JoinTW-2017.2.10/03 Projects/java_application" value="2975542158000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaSpringWebFlowMVC.iml" filepath="$PROJECT_DIR$/JavaSpringWebFlowMVC.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="libraryTable">
+    <library name="Spring MVC-4.3.7.RELEASE" type="spring-mvc">
+      <properties version="4.3.7.RELEASE" />
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-portlet-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-websocket-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-web-4.3.7.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Spring Webflow-2.4.0" type="spring-webflow">
+      <properties version="2.4.0" />
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/spring-binding-2.4.0.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-faces-2.4.0.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-js-2.4.0.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-webflow-2.4.0.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-js-resources-2.4.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Spring-4.3.7.RELEASE" type="spring">
+      <properties version="4.3.7.RELEASE" />
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/spring-instrument-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-aspects-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-expression-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-context-support-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-messaging-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-aop-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-jms-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-oxm-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-beans-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/aopalliance-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-core-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-tx-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-orm-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-context-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-4.3.7.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-test-4.3.7.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
