@@ -11,7 +11,7 @@
     <title>order web flow</title>
 </head>
 <body>
-    <a href="online/order.go">order online</a>
+    <a href="online/shopping.go">shopping online</a>
     <br/>
     <a href="online/cnew.go">cnew online</a>
 </body>

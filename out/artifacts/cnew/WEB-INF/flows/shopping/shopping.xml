@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+
+    <var name="newCart" class="cnew.components.cart.models.Cart"></var>
+
+    <on-start>
+        <set name="conversationScope.shoppingCart" value="newCart"></set>
+    </on-start>
+
+    <view-state id="viewCart" view="shopping/viewCart">
+        <on-render>
+            <evaluate expression="productService.getProducts()" result="viewScope.products"></evaluate>
+        </on-render>
+        <transition on="back" to="backHome"></transition>
+        <transition on="submit" to="viewOrder"></transition>
+        <transition on="addToShoppingCart" to="addProductToShoppingCart"></transition>
+    </view-state>
+
+    <subflow-state id="addProductToShoppingCart" subflow="addToShoppingCart">
+        <transition on="success" to="viewCart"></transition>
+    </subflow-state>
+
+    <view-state id="viewOrder" view="shopping/viewOrder">
+        <transition on="back" to="viewCart"></transition>
+        <transition on="confirm" to="orderConfirmed"></transition>
+    </view-state>
+
+    <view-state id="orderConfirmed" view="shopping/orderConfirmed">
+        <transition on="back" to="viewOrder"></transition>
+        <transition on="backHome" to="backHome"></transition>
+    </view-state>
+
+    <end-state id="backHome" view="externalRedirect:/">
+
+    </end-state>
+</flow>

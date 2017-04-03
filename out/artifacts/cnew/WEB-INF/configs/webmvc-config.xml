@@ -5,7 +5,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+        <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>-->
         <property name="prefix" value="/WEB-INF/views/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
@@ -14,7 +14,9 @@
 
         <!-- /*.do 请求由 flowController 来处理, * 代表flow的名字 -->
         <property name="mappings">
-            <value>/*.go=flowController</value>
+            <props>
+                <prop key="online/*.go">flowController</prop>
+            </props>
         </property>
 
         <property name="defaultHandler">
