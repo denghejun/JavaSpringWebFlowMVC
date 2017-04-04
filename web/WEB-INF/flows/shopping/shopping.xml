@@ -7,6 +7,7 @@
 
     <on-start>
         <set name="conversationScope.shoppingCart" value="newCart"></set>
+        <set name="conversationScope.firstProduct" value="productService.getProduct(1)"></set>
     </on-start>
 
     <view-state id="viewCart" view="shopping/viewCart">
@@ -24,12 +25,21 @@
 
     <view-state id="viewOrder" view="shopping/viewOrder">
         <transition on="back" to="viewCart"></transition>
-        <transition on="confirm" to="orderConfirmed"></transition>
+        <transition on="confirm" to="orderPayment">
+            <evaluate expression="orderService.newOrder(conversationScope.shoppingCart)" result="flowScope.order"></evaluate>
+        </transition>
     </view-state>
 
-    <view-state id="orderConfirmed" view="shopping/orderConfirmed">
-        <transition on="back" to="viewOrder"></transition>
-        <transition on="backHome" to="backHome"></transition>
+    <view-state id="orderPayment" view="shopping/orderPayment" model="order">
+        <binder>
+            <binding property="id"></binding>
+            <binding property="payment"></binding>
+            <binding property="payUser"></binding>
+            <binding property="hasPaid"></binding>
+        </binder>
+        <transition on="back" validate="false" to="viewOrder"></transition>
+        <transition on="refresh" validate="true" to="orderPayment"></transition>
+        <transition on="backHome" validate="false" to="backHome"></transition>
     </view-state>
 
     <end-state id="backHome" view="externalRedirect:/">

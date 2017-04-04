@@ -1,5 +1,9 @@
 package cnew.components.product.models;
 
+import org.springframework.binding.message.MessageBuilder;
+import org.springframework.binding.message.MessageContext;
+import org.springframework.binding.validation.ValidationContext;
+
 import java.io.Serializable;
 
 /**
@@ -37,9 +41,25 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public Product() {
+    }
+
     public Product(int id, String description, float price) {
         this.id = id;
         this.description = description;
         this.price = price;
+    }
+
+    public void validateViewOrder(ValidationContext context) {
+        MessageContext messages = context.getMessageContext();
+        if (this.description.trim().isEmpty()) {
+            messages.addMessage(new MessageBuilder().error().source("description").
+                    defaultText("Description can not be empty.").build());
+        }
+
+        if (this.price <= 0) {
+            messages.addMessage(new MessageBuilder().error().source("price").
+                    defaultText("Price must be greater than zero.").build());
+        }
     }
 }
